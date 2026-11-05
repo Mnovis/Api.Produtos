@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/API/">
+    <Project Path="Api.Produtos.csproj" />
+  </Folder>
+  <Folder Name="/DDD/">
+    <Project Path="../Api.Produtos.Application/Api.Produtos.Application.csproj" />
+    <Project Path="../Api.Produtos.Domain/Api.Produtos.Domain.csproj" />
+    <Project Path="../Api.Produtos.Infrastructure/Api.Produtos.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+</Solution>
