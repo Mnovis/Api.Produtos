@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Api.Produtos.Application\Api.Produtos.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
