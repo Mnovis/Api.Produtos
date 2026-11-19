@@ -43,12 +43,7 @@ namespace Api.Produtos.Application.Services
 
             #region Retornar resposta
 
-            return new ProdutoResponse(
-                produto.IdProduto,
-                produto.Nome,
-                produto.Preco,
-                produto.Quantidade
-            );
+            return ConverterParaResponse(produto);
 
             #endregion
         }
@@ -97,12 +92,7 @@ namespace Api.Produtos.Application.Services
 
             #region Retornar resposta
 
-            return new ProdutoResponse(
-                produto.IdProduto,
-                produto.Nome,
-                produto.Preco,
-                produto.Quantidade
-            );
+            return ConverterParaResponse(produto);
 
             #endregion
         }
@@ -131,12 +121,7 @@ namespace Api.Produtos.Application.Services
 
             #region Retornar resposta
 
-            return new ProdutoResponse(
-                produto.IdProduto,
-                produto.Nome,
-                produto.Preco,
-                produto.Quantidade
-            );
+            return ConverterParaResponse(produto);
 
             #endregion
         }
@@ -158,12 +143,7 @@ namespace Api.Produtos.Application.Services
 
             #region Retornar resposta
 
-            return new ProdutoResponse(
-                produto.IdProduto,
-                produto.Nome,
-                produto.Preco,
-                produto.Quantidade
-            );
+            return ConverterParaResponse(produto);
 
             #endregion
         }
@@ -180,18 +160,21 @@ namespace Api.Produtos.Application.Services
             #region Retornar Lista
 
             return produtos
-                .Select(p => new ProdutoResponse(
-                    p.IdProduto,
-                    p.Nome,
-                    p.Preco,
-                    p.Quantidade
-
-                ))
+                .Select(p => ConverterParaResponse(p))
                 .ToList();
 
             #endregion
+        }
 
-
+        // Método para converter a entidade Produto no DTO de resposta
+        private ProdutoResponse ConverterParaResponse(Produto produto)
+        {
+            return new ProdutoResponse(
+                produto.IdProduto,
+                produto.Nome,
+                produto.Preco,
+                produto.Quantidade
+            );
         }
     }
 }
