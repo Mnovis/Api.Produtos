@@ -9,7 +9,7 @@ namespace Api.Produtos.Controllers
     [ApiController]
     public class ProdutosController : ControllerBase
     {
-        [HttpPost("criar")]
+        [HttpPost]
         public async Task<IActionResult> PostAsync(ProdutoRequest request)
         {
             try
@@ -29,7 +29,7 @@ namespace Api.Produtos.Controllers
             }
         }
 
-        [HttpPut("atualizar/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(Guid id, ProdutoRequest request)
         {
             try
@@ -53,7 +53,7 @@ namespace Api.Produtos.Controllers
             }
         }
 
-        [HttpDelete("excluir/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(Guid id)
         {
             try
@@ -73,7 +73,7 @@ namespace Api.Produtos.Controllers
             }
         }
 
-        [HttpGet("obterTodos")]
+        [HttpGet()]
         public async Task<IActionResult> GetAllAsync()
         {
             try
@@ -89,7 +89,7 @@ namespace Api.Produtos.Controllers
             }
         }
 
-        [HttpGet("obterPorId/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(Guid id)
         {
             try
